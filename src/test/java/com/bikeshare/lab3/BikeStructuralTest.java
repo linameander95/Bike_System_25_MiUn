@@ -1,10 +1,3 @@
-
-// BikeStructuralTest.java
-// This test file was created as part of a group project for Lab 3.
-// The following classes (Bike.java, Station.java, BikeType.java) were chosen for testing because
-// com.bikeshare.model has partial coverage (19% for lines and 15% for branches), while the rest of the packages showed 0% coverage.
-// PaymentService.java was chosen for testing from the service class.
-
 package com.bikeshare.lab3;
 
 import com.bikeshare.model.Bike;
@@ -57,9 +50,9 @@ class BikeStructuralTest {
 
     @Test
     void testStartRideLowBatteryThrows() {
-        electricBike.chargeBattery(-95); // set battery to 5
+        electricBike.chargeBattery(-95);
         electricBike.reserve();
-        electricBike.chargeBattery(-1); // set battery to 4
+        electricBike.chargeBattery(-1);
         assertThrows(IllegalStateException.class, () -> electricBike.startRide());
     }
 
